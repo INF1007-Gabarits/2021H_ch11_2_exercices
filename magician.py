@@ -48,11 +48,11 @@ class Magician:
 
 	@property
 	def mp(self):
-		return self.__mp
+		pass
 
 	@mp.setter
 	def mp(self, val):
-		self.__mp = utils.clamp(val, 0, self.max_hp)
+		pass
 
 	# TODO: Écrire les getter/setter pour la propriété `spell`.
 	#       On peut affecter None.
@@ -68,17 +68,10 @@ class Magician:
 		pass
 
 	def will_use_spell(self):
-		return self.using_magic and self.spell is not None and self.mp >= self.spell.mp_cost
+		pass
 
 	def _compute_magical_damage(self, other):
-		return Character.compute_damage_output(
-			self.level + self.magic_attack,
-			self.spell.power,
-			1,
-			1,
-			1/8,
-			(0.85, 1.00)
-		)
+		pass
 
 	def _compute_physical_damage(self, other):
 		# TODO: Calculer le dommage physique exactement de la même façon que dans `Character`
